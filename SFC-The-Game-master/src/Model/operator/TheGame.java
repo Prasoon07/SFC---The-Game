@@ -2,10 +2,7 @@ package Model.operator;
 
 import javax.swing.JFrame;
 
-/**
- *
- * @author rafiul islam
- */
+
 public class TheGame {
     /**
      * TheGame class is stand for create a frame for game and invoke a main thread 

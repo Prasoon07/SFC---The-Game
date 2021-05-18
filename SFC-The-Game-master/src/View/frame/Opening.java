@@ -21,6 +21,8 @@ public class Opening extends Window{
     private Image anim;
     private Font titleFont,textFont;
     private volatile Sound background;
+     public Opening(){
+}
     
     public Opening(GameManager manager){
         this.manager = manager;

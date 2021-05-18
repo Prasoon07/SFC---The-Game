@@ -24,10 +24,6 @@ import Model.structure.Cell;
 import Model.structure.Sound;
 import Model.structure.Square;
 
-/**
- *
- * @author rafiul islam
- */
 public class Blood extends Window{
     /**
      * Blood class will organize the Blood level view and its structure
@@ -53,6 +49,7 @@ public class Blood extends Window{
     private long milliSec,pausedTime; //game resume time in milisec
     private int counter; //counting non-cancer cell
     private boolean running,paused; //game running detector
+    public Blood(){}
     
     public Blood(GameManager manager){
         this.manager = manager; //call Window manager
@@ -254,6 +251,11 @@ public class Blood extends Window{
                     break;
         }
     }
+    
+    
+    
+    
+    
     /**
      * Image drawer method with corresponding square position.
      */
@@ -452,6 +454,12 @@ public class Blood extends Window{
             currentPoint -=4;
         }
     }
+    
+    public int Game_Status(){
+        int gs = this.GAME_TIME;
+        return gs;
+    }
+ 
     /**
      * This method will invoke when user click any of cells, if the
      * selected tool is available for this level then user will 
@@ -562,5 +570,5 @@ public class Blood extends Window{
                 }
             }
         }).start();
-    }
+    }    
 }

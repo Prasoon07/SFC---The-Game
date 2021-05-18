@@ -28,6 +28,8 @@ import Model.structure.Square;
  *
  * @author rafiul islam
  */
+
+
 public class Lung extends Window{
 
     private static final short TOTAL = 18;
@@ -254,6 +256,7 @@ public class Lung extends Window{
     private void timeCounter(){
         counter = (int)((System.currentTimeMillis() - miliSec)/1000);
     }
+    
 
     /**
      * Override methods
@@ -443,6 +446,12 @@ public class Lung extends Window{
             }).start();
         }
     }
+    public int Game_Status(){
+        int gs = this.GAME_TIME;
+        return gs;
+    }
+    
+    
     private void save(){
         new Thread(new Runnable(){
             public void run(){

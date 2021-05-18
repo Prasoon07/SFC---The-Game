@@ -28,6 +28,8 @@ import Model.structure.Square;
  *
  * @author rafiul islam
  */
+
+
 public class Breast extends Window{
     
     private static final int TOTAL = 8;
@@ -55,6 +57,8 @@ public class Breast extends Window{
     //gameOver detection 
     private boolean running,paused;
     
+    
+    
     public Breast(GameManager manager){
         this.manager = manager;
         running = true;
@@ -75,7 +79,11 @@ public class Breast extends Window{
         numFont = Game.Fonts.getFont("mistv.ttf",Font.BOLD,40);
         
         backSound.loop();
+        
+        
     }
+    
+    
     
     private void loadBackground(){
         background = Game.getImage("/image/level/breast/background.jpg");
@@ -406,6 +414,14 @@ public class Breast extends Window{
             }
         }
     }
+    
+    public int Game_Status(){
+        int gs = this.GAME_TIME;
+        return gs;
+    }
+    
+    
+    
     private void objectiveFinish(){
         if(cellCounter==TOTAL || counter==GAME_TIME){
             running = false;

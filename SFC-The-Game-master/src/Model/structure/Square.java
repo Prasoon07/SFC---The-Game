@@ -1,9 +1,5 @@
 package Model.structure;
 
-/**
- *
- * @author rafiul islam
- */
 public class Square {
     private int x;
     private int y;
@@ -20,9 +16,18 @@ public class Square {
     
     public Square(int x, int y, int width, int height){
         this.x = x; this.y = y; this.width = width; this.height = height;
+        
     }
-
+    
     public boolean isInside(int x, int y){
+        if( (x>=this.x && x<=this.x + this.width) && 
+            (y>=this.y && y<=this.y + this.height) )
+            return true;
+        
+        return false;
+    }
+    
+    public boolean isInsides(int x, int y, int width, int height){
         if( (x>=this.x && x<=this.x + this.width) && 
             (y>=this.y && y<=this.y + this.height) )
             return true;

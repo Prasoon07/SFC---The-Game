@@ -48,12 +48,13 @@ public class MotionCell extends Cell{
         }
         positionCheck();
     }
-    private void positionCheck(){
+    private boolean positionCheck(){
         if(getX() < endX || getY() < endY){
             up = false;
         }
         else if(getX() > centerX || getY() > centerY){
             up = true;
         }
+     return up;   
     }
 }
